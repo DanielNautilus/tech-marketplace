@@ -1,0 +1,155 @@
+@import "../../global-styles/mixins";
+
+.product-detail-page {
+  margin: 40px 66px 0;
+  display: flex;
+  flex-direction: column;
+  gap: calc(14 * var(--base-gap));
+
+  &__details {
+    display: grid;
+    gap: calc(15 * var(--base-gap));
+
+    &-thumbnail {
+      display: flex;
+      flex-direction: column;
+      gap: calc(3 * var(--base-gap));
+      margin: 0 auto;
+
+      &-image {
+        border-radius: var(--base-border-radius);
+        width: var(--base-tumbnail-size);
+        height: var(--base-tumbnail-size);
+      }
+
+      &-rating {
+        text-align: center;
+      }
+    }
+
+    &-information {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: calc(4 * var(--base-gap));
+
+      &-category {
+        display: inline-block;
+        padding: var(--base-small-btn-paddings);
+        border-radius: var(--base-border-radius);
+        background: var(--base-category-bg-color);
+        color: var(--second-btn-text-color);
+      }
+
+      &-price {
+        margin: 20px 0 0;
+      }
+    }
+  }
+}
+
+@include small-mobile {
+  .product-detail-page {
+    margin: 20px 33px 0;
+    gap: calc(7 * var(--base-gap));
+
+    &__details {
+
+      grid-template-rows: var(--base-tumbnail-size) auto;
+
+      &-thumbnail {
+
+        gap: calc(1.5 * var(--base-gap));
+
+        &-image {
+
+        }
+
+        &-rating {
+        }
+      }
+
+      &-information {
+        gap: calc(2 * var(--base-gap));
+
+        &-category {
+
+        }
+
+        &-price {
+          margin: 10px 0 0;
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .product-detail-page {
+    margin: 20px 33px 0;
+    gap: calc(7 * var(--base-gap));
+
+    &__details {
+
+      grid-template-rows: var(--base-tumbnail-size) auto;
+
+      &-thumbnail {
+
+        gap: calc(1.5 * var(--base-gap));
+
+        &-image {
+
+        }
+
+        &-rating {
+        }
+      }
+
+      &-information {
+        gap: calc(2 * var(--base-gap));
+
+        &-category {
+
+        }
+
+        &-price {
+          margin: 10px 0 0;
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .product-detail-page {
+
+
+    &__details {
+
+      grid-template-columns: var(--base-tumbnail-size) auto;
+
+      &-thumbnail {
+
+
+        &-image {
+
+        }
+
+        &-rating {
+        }
+      }
+
+      &-information {
+
+
+        &-category {
+
+        }
+
+        &-price {
+
+        }
+      }
+    }
+  }
+}

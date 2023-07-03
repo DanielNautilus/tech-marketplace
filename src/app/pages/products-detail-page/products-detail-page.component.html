@@ -1,0 +1,17 @@
+<section class="product-detail-page">
+  <span class="product-detail-page__button">
+  <button (click)="goBack()" class="button button--indigo button--big-size">Назад</button>
+  </span>
+  <div *ngIf="product" class="product-detail-page__details">
+    <div class="product-detail-page__details-thumbnail">
+      <img class="product-detail-page__details-thumbnail-image" [src]="product!.thumbnail" alt="alt">
+      <span class="product-detail-page__details-thumbnail-rating">Рейтинг: {{product!.rating}}</span>
+    </div>
+    <div class="product-detail-page__details-information">
+      <div class="product-detail-page__details-information-category">{{product!.category}}</div>
+      <h1 class="product-detail-page__details-information-name">{{product!.title}}</h1>
+      <span class="product-detail-page__details-information-description">{{product!.description}}</span>
+      <h1 class="product-detail-page__details-information-price">{{product!.price}}$</h1>
+    </div>
+  </div>
+</section>

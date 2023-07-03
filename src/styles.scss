@@ -1,1 +1,90 @@
-/* You can add global styles to this file, and also import other style files */
+@import "app/global-styles/link";
+@import "app/global-styles/button";
+@import "app/global-styles/page";
+@import "app/global-styles/logo";
+@import "app/global-styles/fields-error";
+@import "app/global-styles/products-container";
+@import "app/global-styles/table";
+@import "app/global-styles/input";
+@import "app/global-styles/error";
+@import "app/global-styles/icon";
+
+:root {
+  --base-font-family: Inter, sans-serif;
+  //Base
+  --base-text-color: #000000;
+  --second-text-color: #111827; //900
+  --third-text-color: #6B7280; //500
+  --fourth-text-color: #9CA3AF; //400
+  //Не оч хорошо, по правильно наверн надо называть title,heading, product title,e.t.c.
+  --biggest-text-size: 36px/40px var(--base-font-family);
+  --big-text-size: 30px/36px var(--base-font-family);
+  --large-text-size: 24px/16px var(--base-font-family);
+  --base-text-size: 18px/20px var(--base-font-family);
+  --middle-text-size: 14px/20px var(--base-font-family);
+  --small-text-size: 12px/16px var(--base-font-family);
+  --little-text-size: 10px/16px var(--base-font-family);
+
+  --base-box-shadow: 0px 1px 2px 0px #0000000F, 0px 1px 3px 0px #0000001A;
+  --first-bg-color: #FFFFFF;
+  --second-bg-color: #F3F4F6;
+  --base-paddings: 8px;
+  --base-gap: 4px;
+  --base-border-radius: 8px;
+
+
+  --base-divider-color: #E5E7EB;
+
+  --base-tumbnail-size: 250px;
+
+  --base-logo-size: 24px;
+  --base-icon-size: 16px;
+  --base-category-bg-color: #DBEAFE;
+
+  --success-color: #47BD8F;
+  --second-success-color: #F0FDFA;
+  --warning-color: #FFAC32;
+  --error-color: #FF5C5D;
+  --information-color: #F5F3FF;
+  //User
+  --base-user-image-border-radius: 50%;
+  --base-user-image-size: 64px;
+
+
+  //Buttons
+  --base-btn-text-color: #FFFFFF;
+  --second-btn-text-color: #4338CA;
+  --base-btn-bg-color: #4F46E5;
+  --second-btn-bg-color: #374151;
+  --third-btn-bg-color: #E0E7FF;
+
+  --base-small-btn-paddings: 8px 12px;
+  --base-big-btn-paddings: 12px 16px;
+  --base-biggest-btn-paddings: 10px 18px;
+
+  //Card
+  --base-card-width: 370px;
+  --base-card-image-width: var(--base-card-width);
+  --base-card-image-height: 192px;
+  --base-card-name-font: 600 20px/28px var(--base-font-family);
+  --base-card-price-font: 700 20px/20px var(--base-font-family);
+  --base-card-box-shadow: 0px 4px 6px -2px #0000000D, 0px 10px 15px -3px #0000001A;
+  //Table
+  --inversed-table-bg-color: #F9FAFB;
+
+  //Inputs
+  --base-input-paddings: 8px 12px
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+body {
+  font-family: var(--base-font-family);
+}
+
+*, :after, :before {
+  box-sizing: border-box !important;
+}
+

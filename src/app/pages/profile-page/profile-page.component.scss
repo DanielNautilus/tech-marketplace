@@ -1,0 +1,111 @@
+@import "../../../app/global-styles/mixins";
+.profile {
+  margin: 40px 60px 0 50px;
+  display: flex;
+  flex-direction: column;
+  gap: calc(18 * var(--base-gap));
+
+  &__short-information {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    &-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: calc(5 * var(--base-gap));
+
+      &-image {
+        width: var(--base-user-image-size);
+        height: var(--base-user-image-size);
+        border-radius: var(--base-user-image-border-radius);
+        border: 1px solid black;
+      }
+
+      &-name {
+        text-align: center;
+        font: 700 var(--large-text-size);
+      }
+    }
+
+    &-button-container {
+      margin: auto 0;
+    }
+  }
+
+  &__detail-information {
+    display: flex;
+    flex-direction: column;
+    gap: calc(5 * var(--base-gap));
+
+    &-heading {
+
+    }
+
+    &-information-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: calc(5 * var(--base-gap));
+      justify-content: center;
+
+      &-item {
+        padding: calc(3 * var(--base-paddings));
+        border-radius: var(--base-border-radius);
+        box-shadow: var(--base-card-box-shadow);
+        display: flex;
+        flex-direction: column;
+        gap: var(--base-gap);
+
+        &-description {
+          color: var(--third-text-color);
+          font: 500 var(--middle-text-size);
+        }
+
+        &-value {
+          color: var(--second-text-color);
+          font: 600 var(--big-text-size);
+        }
+      }
+    }
+  }
+}
+@include mobile {
+
+  .profile {
+    margin: 20px 30px 0 25px;
+    gap: calc(9 * var(--base-gap));
+    &__short-information {
+      &-container {
+
+        &-image {
+        }
+
+        &-name {
+        }
+      }
+
+      &-button-container {
+      }
+    }
+
+    &__detail-information {
+      &-heading {
+      }
+
+      &-information-container {
+
+        grid-template-columns: repeat(1, 1fr);
+        &-item {
+          &-description {
+
+          }
+
+          &-value {
+
+          }
+        }
+      }
+    }
+  }
+}

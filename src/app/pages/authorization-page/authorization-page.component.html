@@ -1,0 +1,42 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="loginForm" class="auth-container">
+  <div class="auth-container__logo
+              logo">
+    <img alt="logo"
+         class="logo__image
+                logo__image--big-size"
+         src="assets/Main.svg">
+  </div>
+  <h2 class="auth-container__description">
+    Вход в личный кабинет
+  </h2>
+  <div class="auth-container__inputs-container">
+    <div class="input">
+      <input class="input__field input__field--rowed"
+             formControlName="username"
+             placeholder="Логин"
+             type="text">
+    </div>
+    <div class="input">
+      <input class="input__field input__field--rowed-inverse"
+             formControlName="password"
+             placeholder="Пароль"
+             type="password">
+    </div>
+
+    <span *ngIf="isPasswordValid"
+          class="auth-container__inputs-container-error
+                 fields-error">
+      Минимальная длина пароля 5 символов
+    </span>
+  </div>
+  <span *ngIf="errorMessage"
+        class="auth-container__error
+               fields-error">
+    {{errorMessage}}
+  </span>
+  <button class="auth-container__button
+                 button"
+          type="submit">
+    Войти
+  </button>
+</form>

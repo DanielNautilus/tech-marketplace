@@ -1,0 +1,22 @@
+<section class="admin-products-section-page">
+  <h1 class="admin-products-section-page__heading">Администрирование - Товары</h1>
+  <table *ngIf="products" class="admin-products-section-page__table table">
+    <tr class="table__row">
+      <th class="table__cell table__cell-head table__cell-first">Название товара</th>
+      <th class="table__cell table__cell-head">Бренд</th>
+      <th class="table__cell table__cell-head">Цена</th>
+      <th class="table__cell table__cell-head">Рейтинг</th>
+      <th class="table__cell table__cell-head table__cell-last"></th>
+    </tr>
+    <tr *ngFor="let product of products; let i = index;let last = last" [ngClass]="{ 'table__row_even': i % 2 !== 0}"
+        class="table__row">
+      <td class="table__cell" [ngClass]="{ 'table__cell-first-record': last }">{{ product!.title }}</td>
+      <td class="table__cell">{{ product!.brand }}</td>
+      <td class="table__cell">{{ product!.price }}$</td>
+      <td class="table__cell">{{ product!.rating | number: '1.2-2' }}</td>
+      <td (click)="navigateToProduct(product!.id)" [ngClass]="{ 'table__cell-last-record': last }"
+          class="table__cell table__cell-action">Редактировать
+      </td>
+    </tr>
+  </table>
+</section>

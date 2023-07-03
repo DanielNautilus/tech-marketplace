@@ -1,0 +1,9 @@
+.not-found-page{
+  display: flex;
+  width: 100%;
+  padding: calc(4 * var(--base-paddings));
+  justify-content: center;
+  &__text{
+
+  }
+}

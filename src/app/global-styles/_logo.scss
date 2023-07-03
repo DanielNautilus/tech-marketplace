@@ -1,0 +1,19 @@
+.logo {
+  display: flex;
+  gap: calc(4 * var(--base-gap));
+  &__image {
+    width:  calc(1.25 * var(--base-logo-size));
+    height:  calc(1.25 * var(--base-logo-size));
+    &--big-size{
+      width:  calc(2 * var(--base-logo-size));
+      height:  calc(2 * var(--base-logo-size));
+    }
+  }
+
+  &__name {
+    font: 800 var(--base-text-size);
+    color: var(--base-text-color);
+    margin: auto 0;
+    letter-spacing: 0;
+  }
+}

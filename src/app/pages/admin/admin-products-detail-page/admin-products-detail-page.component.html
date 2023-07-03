@@ -1,0 +1,54 @@
+<section class="admin-products-detail-page">
+  <h1 class="admin-products-detail-page__heading">Администрирование - Редактирование товара</h1>
+  <div *ngIf="product" class="admin-products-detail-page__form-container">
+    <form class="admin-products-detail-page__form-container-form" (ngSubmit)="confirm()"  [formGroup]="productForm">
+      <div class="admin-products-detail-page__form-container-form-content">
+        <div class="admin-products-detail-page__form-container-form-content-main">
+          <div class="admin-products-detail-page__form-container-form-content-main-name">{{ productForm.value.name || 'Заполните имя' }}</div>
+          <img class="admin-products-detail-page__form-container-form-content-main-image" [src]="product!.thumbnail" alt="alt">
+        </div>
+
+        <div class="admin-products-detail-page__form-container-form-content-controls">
+          <div class="admin-products-detail-page__form-container-form-content-controls-form-row">
+            <div class="admin-products-detail-page__form-container-form-content-controls-form-row-form-group input">
+              <label class="input__label" for="name">Название:</label>
+              <input class="input__field" id="name" type="text" formControlName="name" />
+              <div class="error" *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched">
+                Название обязательно
+              </div>
+            </div>
+            <div class="admin-products-detail-page__form-container-form-content-controls-form-row-form-group input">
+              <label class="input__label" for="description">Краткое описание:</label>
+              <input class="input__field" id="description" type="text" formControlName="description" />
+            </div>
+          </div>
+          <div class="admin-products-detail-page__form-container-form-content-controls-form-row">
+            <div class="admin-products-detail-page__form-container-form-content-controls-form-row-form-group input">
+              <label class="input__label" for="brand">Бренд:</label>
+              <input class="input__field" id="brand" type="text" formControlName="brand" />
+              <div class="error" *ngIf="productForm.get('brand')?.invalid && productForm.get('brand')?.touched">
+                Бренд обязателен
+              </div>
+            </div>
+            <div class="admin-products-detail-page__form-container-form-content-controls-form-row-form-group input">
+              <label class="input__label" for="price">Цена:</label>
+              <input class="input__field" id="price" type="number" formControlName="price" />
+              <div class="error" *ngIf="productForm.get('price')?.invalid && productForm.get('price')?.touched">
+                Цена обязательна
+              </div>
+            </div>
+            <div class="admin-products-detail-page__form-container-form-content-controls-form-row-form-group input">
+              <label class="input__label" for="rating">Рейтинг:</label>
+              <input class="input__field" id="rating" type="number" formControlName="rating" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="admin-products-detail-page__form-container-form-actions">
+        <button class="button button--white button--biggest-size" (click)="cancel()">Закрыть</button>
+        <button class="button button--biggest-size" [ngClass]="{ 'button--disabled': productForm.invalid}"  [disabled]="productForm.invalid"  type="submit">Сохранить</button>
+      </div>
+    </form>
+
+  </div>
+</section>

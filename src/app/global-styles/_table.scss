@@ -1,0 +1,59 @@
+// app.component.scss
+.table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--third-text-color);
+  table-layout: fixed;
+  &__row {
+    border-radius: var(--base-border-radius) var(--base-border-radius) 0 0;
+
+    &_even {
+      background-color: var(--inversed-table-bg-color);
+    }
+  }
+
+  &__cell {
+    text-align: left;
+    padding: calc(1.5 * var(--base-paddings)) calc(2 * var(--base-paddings));
+    color: var(--third-text-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:not(:last-child) {
+      max-width: calc(100% / 4);
+    }
+
+    &-head {
+      background-color: var(--inversed-table-bg-color);
+      border-bottom: 2px solid var(--third-text-color);
+    }
+
+    &-action {
+      font: 400 var(--middle-text-size);
+      color: var(--base-btn-bg-color);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &-first {
+      border-radius: var(--base-border-radius) 0 0 0;
+
+      &-record {
+        border-radius: 0 0 var(--base-border-radius) var(--base-border-radius);
+      }
+    }
+
+    &-last {
+      border-radius: 0 var(--base-border-radius) 0 0;
+
+      &-record {
+        border-radius: 0 0 var(--base-border-radius) var(--base-border-radius);
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.link {
+  &:hover{
+    cursor: pointer;
+  }
+  &--cleared {
+    text-decoration: none;
+  }
+}

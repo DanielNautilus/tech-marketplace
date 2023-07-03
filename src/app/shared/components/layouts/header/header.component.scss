@@ -1,0 +1,57 @@
+@import "../../../../global-styles/mixins";
+
+.header {
+  flex-shrink: 0;
+  height: 62px;
+  padding: calc(2 * var(--base-paddings)) calc(4 * var(--base-paddings));
+  display: flex;
+  gap: calc(4 * var(--base-gap));
+  box-shadow: var(--base-box-shadow);
+
+  &__logo {
+
+  }
+
+  &__navigation {
+  }
+
+  &__button {
+  }
+
+  &__person {
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  &__divider {
+    flex-grow: 1;
+  }
+}
+
+@include mobile {
+  .header {
+    gap: calc(2 * var(--base-gap));
+    padding: calc(2 * var(--base-paddings)) calc(2 * var(--base-paddings));
+
+    &__logo {
+
+    }
+
+    &__navigation {
+      margin-left: calc(4 * var(--base-gap));
+    }
+
+    &__login {
+      margin-right: calc(1 * var(--base-paddings));
+    }
+
+    &__person {
+      margin-right: calc(1 * var(--base-paddings));
+    }
+
+    &__divider {
+
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<section *ngIf="userDetails" class="profile">
+  <h1 class="profile__heading">Личный кабинет</h1>
+  <div class="profile__short-information">
+    <div class="profile__short-information-container">
+      <img class="profile__short-information-container-image" [src]="userDetails!.image" alt="alt">
+      <span class="profile__short-information-container-name">{{userDetails!.firstName}} {{userDetails!.maidenName}}</span>
+    </div>
+    <div class="profile__short-information-button-container">
+      <button *ngIf="(user$ | async)?.role === 'admin'" (click)="goToAdminPage()" class="button button--biggest-size">Администрирование</button>
+    </div>
+  </div>
+  <div class="profile__detail-information">
+    <h3 class="profile__detail-information-heading">Основная информация</h3>
+    <div class="profile__detail-information-information-container">
+      <div class="profile__detail-information-information-container-item">
+        <div class="profile__detail-information-information-container-item-description">Возраст</div>
+        <div class="profile__detail-information-information-container-item-value">{{userDetails!.age}}</div>
+      </div>
+      <div class="profile__detail-information-information-container-item">
+        <div class="profile__detail-information-information-container-item-description">Email</div>
+        <div class="profile__detail-information-information-container-item-value">{{userDetails!.email}}</div>
+      </div>
+      <div class="profile__detail-information-information-container-item">
+        <div class="profile__detail-information-information-container-item-description">IP</div>
+        <div class="profile__detail-information-information-container-item-value">{{userDetails!.ip}}</div>
+      </div>
+    </div>
+
+  </div>
+</section>

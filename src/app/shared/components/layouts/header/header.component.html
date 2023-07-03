@@ -1,0 +1,31 @@
+<header class="header">
+  <div class="header_logo logo">
+    <img class="logo__image" src="assets/Main.svg" alt="logo">
+    <h1 class="logo__name">Tech</h1>
+  </div>
+  <nav class="header__navigation navigation">
+    <a [routerLink]="['/']"  class="navigation__item navigation__item--main link link--cleared">Главная</a>
+    <a [routerLink]="['/','catalog']" class="navigation__item link link--cleared">Каталог товаров</a>
+  </nav>
+  <div class="header__divider"></div>
+
+  <ng-container *ngIf="{ user: user$ | async } as data">
+    <button [routerLink]="['/','auth']" *ngIf="!data.user" class="button">Войти</button>
+
+    <div *ngIf="data.user" [routerLink]="['/','profile']" class="header__person person">
+      <span class="person__name">{{ data.user.username | titlecase }}</span>
+      <span class="person__role">{{ data.user.role === 'admin' ? 'Администратор' : 'Пользователь' }}</span>
+    </div>
+    <button [routerLink]="['/','admin']" *ngIf="data.user?.role === 'admin'" class="person__button button">Администрирование</button>
+    <div class="person__icon">
+      <img src="assets/Admin.svg" [routerLink]="['/','admin']" *ngIf="data.user?.role === 'admin'" class="icon" alt="alt"/>
+    </div>
+    <button *ngIf="data.user" (click)="onLogout()" class="person__button button button--red">Выйти</button>
+    <div class="person__icon person__icon--red">
+      <img src="assets/Logout.svg" *ngIf="data.user" (click)="onLogout()" class="icon" alt="alt"/>
+    </div>
+  </ng-container>
+
+
+</header>
+

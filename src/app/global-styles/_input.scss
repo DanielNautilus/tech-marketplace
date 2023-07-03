@@ -1,0 +1,23 @@
+.input{
+  display: flex;
+  flex-direction: column;
+  gap: var(--base-gap);
+
+  &__label{
+
+  }
+  &__field{
+    width: 100%;
+    padding: var(--base-input-paddings);
+    border: 1px solid var(--fourth-text-color);
+    color: var(--third-text-color);
+    border-radius: calc(0.5 *var(--base-border-radius));
+    &--rowed{
+      border-radius: calc(0.5 *var(--base-border-radius)) calc(0.5 *var(--base-border-radius)) 0 0;
+
+    }
+    &--rowed-inverse{
+      border-radius: 0 0 calc(0.5 *var(--base-border-radius)) calc(0.5 *var(--base-border-radius));
+    }
+  }
+}

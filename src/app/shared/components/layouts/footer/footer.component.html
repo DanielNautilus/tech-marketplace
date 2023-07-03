@@ -1,0 +1,24 @@
+<footer class="footer">
+  <div class="footer__short-information-container">
+    <div class="header_logo logo">
+      <img class="logo__image" src="assets/Main.svg" alt="logo">
+      <h1 class="logo__name">Tech</h1>
+    </div>
+    <span class="footer__short-information-container__description">
+      Магазин Электроники
+    </span>
+  </div>
+
+  <div class="footer__nav-container">
+    <div class="footer__nav-container-description">Ссылки</div>
+    <nav class="footer__nav-container__navigation navigation navigation--vertical">
+
+      <a [routerLink]="['/']" class="navigation__item navigation__item--big link link--cleared">Главная</a>
+      <a [routerLink]="['/','catalog']" class="navigation__item navigation__item--big link link--cleared">Каталог товаров</a>
+    </nav>
+  </div>
+
+  <div class="footer__divider"></div>
+
+</footer>
+

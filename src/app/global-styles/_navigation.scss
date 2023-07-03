@@ -1,0 +1,19 @@
+.navigation{
+  display: flex;
+  gap: calc(5 * var(--base-gap));
+  &--vertical{
+    flex-direction: column;
+  }
+  &__item{
+    margin: auto 0;
+    font: 500 var(--middle-text-size);
+    color: var(--third-text-color);
+
+    &--main{
+      color: var(--second-text-color);
+    }
+    &--big{
+      font: 400 var(--base-text-size);
+    }
+  }
+}

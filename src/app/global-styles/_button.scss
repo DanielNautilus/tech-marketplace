@@ -1,0 +1,42 @@
+.button {
+  padding: var(--base-paddings) calc(1.5 * var(--base-paddings));
+  font: 500 var(--small-text-size);
+  color: var(--base-btn-text-color);
+  background: var(--base-btn-bg-color);
+  border-radius: calc(0.5 * var(--base-border-radius));
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--big-size {
+    padding: var(--base-big-btn-paddings);
+  }
+
+  &--biggest-size {
+    font: 500 var(--middle-text-size);
+    padding: var(--base-biggest-btn-paddings);
+  }
+
+  &--red {
+    background: var(--error-color);
+  }
+
+  &--white {
+    color: var(--second-text-color);
+    background-color: var(--third-btn-bg-color);
+  }
+
+  &--indigo {
+    font-weight: 600;
+    color: var(--second-btn-text-color);
+    background: var(--third-btn-bg-color);
+  }
+  &--disabled{
+    opacity: 0.3;
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import "../../../../global-styles/mixins";
+
+.footer {
+  flex-shrink: 0;
+  display: flex;
+  gap: calc(20 * var(--base-gap));
+  padding: calc(8 * var(--base-paddings)) calc(9 * var(--base-paddings));
+  &__short-information-container{
+    display: flex;
+    flex-direction: column;
+    gap: var(--base-gap);
+  }
+  &__nav-container {
+    display: flex;
+    flex-direction: column;
+    &-description {
+      font: 400 var(--base-text-size);
+    }
+
+    &__navigation {
+
+    }
+  }
+}
+@include mobile{
+  .footer {
+    flex-direction: column;
+    &__nav-container {
+
+      &__description {
+
+      }
+
+      &__navigation {
+
+      }
+    }
+  }
+}
+@include mobile{
+  .footer {
+    flex-direction: column;
+    &__nav-container {
+      &__description {
+
+      }
+
+      &__navigation {
+
+      }
+    }
+  }
+}

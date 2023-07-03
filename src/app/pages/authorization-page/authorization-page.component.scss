@@ -1,0 +1,36 @@
+:host {
+  margin: auto;
+}
+
+.auth-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__logo {
+    margin-bottom: calc(6 * var(--base-gap));
+  }
+  &__description{
+    font: 800 var(--big-text-size);
+    margin-bottom: calc(8 * var(--base-gap));
+  }
+  &__inputs-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: calc(6 * var(--base-gap));
+    &-error{
+      padding: var(--base-paddings);
+      text-align: center;
+    }
+  }
+  &__error{
+    padding: var(--base-paddings);
+  }
+  &__button{
+    width: 100%;
+  }
+}

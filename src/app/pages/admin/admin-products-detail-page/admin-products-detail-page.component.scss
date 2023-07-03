@@ -1,0 +1,205 @@
+@import "../../../global-styles/mixins";
+
+.admin-products-detail-page {
+  &__heading {
+    margin: 40px 50px;
+  }
+
+  &__form-container {
+    width: 100%;
+
+    background-color: var(--second-bg-color);
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+      gap: calc(6 * var(--base-gap));
+      padding: calc(3 * var(--base-paddings)) calc(4 * var(--base-paddings));
+
+      &-content {
+        display: grid;
+        gap: calc(6 * var(--base-gap));
+        background-color: var(--first-bg-color);
+        border-radius: var(--base-border-radius);
+        padding: calc(3 * var(--base-paddings));
+
+        &-main {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: calc(4 * var(--base-gap));
+
+          &-name {
+            text-align: center;
+          }
+
+          &-image {
+            margin: 0 auto;
+            border-radius: var(--base-border-radius);
+            width: var(--base-tumbnail-size);
+            height: var(--base-tumbnail-size);
+          }
+        }
+
+        &-controls {
+          display: flex;
+          flex-direction: column;
+          gap: calc(6 * var(--base-gap));
+
+          &-form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: calc(6 * var(--base-gap));
+
+            &-form-group {
+              flex: 1;
+              min-width: 200px;
+            }
+          }
+        }
+      }
+
+      &-actions {
+        display: flex;
+        gap: calc(3 * var(--base-gap));
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .admin-products-detail-page {
+    &__heading {
+
+    }
+
+    &__form-container {
+
+
+      &-form {
+
+
+        &-content {
+          grid-template-rows: 1fr 1fr;
+
+          &-main {
+
+
+            &-name {
+            }
+
+            &-image {
+
+            }
+          }
+
+          &-controls {
+
+            &-form-row {
+
+              &-form-group {
+
+              }
+            }
+          }
+        }
+
+        &-actions {
+
+        }
+      }
+    }
+  }
+
+}
+
+@include small-mobile {
+  .admin-products-detail-page {
+    &__heading {
+
+    }
+
+    &__form-container {
+
+
+      &-form {
+
+
+        &-content {
+          grid-template-rows: 1fr 1fr;
+
+          &-main {
+
+
+            &-name {
+            }
+
+            &-image {
+
+            }
+          }
+
+          &-controls {
+
+            &-form-row {
+
+              &-form-group {
+
+              }
+            }
+          }
+        }
+
+        &-actions {
+
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .admin-products-detail-page {
+    &__heading {
+
+    }
+
+    &__form-container {
+
+
+      &-form {
+
+
+        &-content {
+          grid-template-columns: 1fr 1fr;
+
+          &-main {
+
+
+            &-name {
+            }
+
+            &-image {
+
+            }
+          }
+
+          &-controls {
+
+            &-form-row {
+
+              &-form-group {
+
+              }
+            }
+          }
+        }
+
+        &-actions {
+
+        }
+      }
+    }
+  }
+}

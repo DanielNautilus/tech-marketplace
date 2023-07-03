@@ -1,0 +1,107 @@
+@import "../../app/global-styles/mixins";
+
+.person {
+  display: flex;
+  flex-direction: column;
+
+  &__name {
+    font: 600 var(--middle-text-size);
+    color: var(--base-text-color);
+  }
+
+  &__role {
+    font: 400 var(--little-text-size);
+    color: var(--third-text-color);
+  }
+
+  &__button {
+    display: none;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: calc(0.75 * var(--base-paddings));
+    border-radius: var(--base-border-radius);
+    background: var(--base-btn-bg-color);
+
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--red {
+      background-color: var(--error-color);
+    }
+  }
+
+}
+
+@include small-mobile {
+  .person {
+
+    &__name {
+
+    }
+
+    &__role {
+
+    }
+
+    &__button {
+      display: none;
+    }
+
+    &__icon {
+
+    }
+
+  }
+}
+
+@include mobile {
+  .person {
+
+    &__name {
+
+    }
+
+    &__role {
+
+    }
+
+    &__button {
+      display: none;
+    }
+
+    &__icon {
+
+    }
+
+  }
+}
+
+@include desktop {
+  .person {
+
+    &__name {
+
+    }
+
+    &__role {
+
+    }
+
+    &__button {
+      display: block;
+    }
+
+    &__icon {
+      display: none;
+    }
+
+  }
+}

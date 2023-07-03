@@ -1,0 +1,10 @@
+<section class="products-section-page">
+  <h1 class="products-section-page__header">Каталог товаров</h1>
+  <div *ngIf="products" class="products-section-page__products-container products-container">
+    <div (click)="openProductDetailPage(product.id)" *ngFor="let product of products" class="products-container__product">
+      <img class="products-container__product-image" [src]="product.thumbnail" alt="alt">
+      <span class="products-container__product-name">{{product.title}}</span>
+      <span class="products-container__product-price">{{product.price}}$</span>
+    </div>
+  </div>
+</section>
